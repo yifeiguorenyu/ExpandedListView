@@ -3,7 +3,12 @@ package com.chx.yifei.expandablelistviewapplication.bean;
 public class ChapterItem {
     private int id;
     private String name;
+    private int pid;
 
+    public static  final String TABLE_NAME="tb_chapter_item";
+    public static final String COL_ID ="_id";
+    public static final String COL_NAMe="name";
+    public static final String COL_PID="pid";
     public ChapterItem(){}
 
     public ChapterItem(int id, String name) {
@@ -11,7 +16,7 @@ public class ChapterItem {
         this.name = name;
     }
 
-    private int pid;
+
 
 
 
@@ -37,5 +42,14 @@ public class ChapterItem {
 
     public void setPid(int pid) {
         this.pid = pid;
+    }
+
+    @Override
+    public String toString() {
+        return "ChapterItem{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pid=" + pid +
+                '}';
     }
 }

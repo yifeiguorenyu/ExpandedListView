@@ -78,6 +78,7 @@ public class ChapterAdapter extends BaseExpandableListAdapter {
         }
         Chapter chapter = mDatas.get(groupPosition);
         parentViewHolder.mTvName.setText(chapter.getName());
+        parentViewHolder.mImage.setImageResource(R.drawable.group_indicator);
         parentViewHolder.mImage.setSelected(isExpanded);
         return convertView;
     }
